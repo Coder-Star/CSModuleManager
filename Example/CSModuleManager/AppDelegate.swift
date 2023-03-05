@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  CSModuleManager
 //
-//  Created by litianxing on 02/11/2023.
-//  Copyright (c) 2023 litianxing. All rights reserved.
+//  Created by CoderStar on 02/11/2023.
+//  Copyright (c) 2023 CoderStar. All rights reserved.
 //
 
 import UIKit
+import CSModuleManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+        /// 自动扫描并注册所有的模块
+        ModuleManager.shared.autoRegisterAllModules()
+
+        /// 首帧需要启动的模块
+        /// 提前进行load
+        for item in ModuleManager.shared.modules where item.name == "OneModule" {
+            ModuleManager.shared.load(module: item)
+            break
+        }
+
+        print("didFinishLaunchingWithOptions 执行完毕")
         return true
     }
 
@@ -44,3 +56,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+// MARK: - 示例
+
+/// 继承 ScannableModule 便会自动被扫描
+class OneModule: ScannableModule {
+    static func moduleOptions() -> [ModuleOptionsItem] {
+        return [.name(name: "OneModule")]
+    }
+
+    func moduleDidFinishLaunch(module: Module, context: ModuleContext) {
+        print("OneModule moduleDidFinishLaunch")
+        print("context.application \(context.application as Any)")
+        print("context.launchOptions \(context.launchOptions as Any)")
+    }
+}

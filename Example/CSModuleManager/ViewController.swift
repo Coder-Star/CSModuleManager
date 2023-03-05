@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  CSModuleManager
 //
-//  Created by litianxing on 02/11/2023.
-//  Copyright (c) 2023 litianxing. All rights reserved.
+//  Created by CoderStar on 02/11/2023.
+//  Copyright (c) 2023 CoderStar. All rights reserved.
 //
 
 import UIKit

@@ -1,6 +1,6 @@
 # CSModuleManager
 
-[![CI Status](https://img.shields.io/travis/litianxing/CSModuleManager.svg?style=flat)](https://travis-ci.org/litianxing/CSModuleManager)
+[![CI Status](https://img.shields.io/travis/CoderStar/CSModuleManager.svg?style=flat)](https://travis-ci.org/CoderStar/CSModuleManager)
 [![Version](https://img.shields.io/cocoapods/v/CSModuleManager.svg?style=flat)](https://cocoapods.org/pods/CSModuleManager)
 [![License](https://img.shields.io/cocoapods/l/CSModuleManager.svg?style=flat)](https://cocoapods.org/pods/CSModuleManager)
 [![Platform](https://img.shields.io/cocoapods/p/CSModuleManager.svg?style=flat)](https://cocoapods.org/pods/CSModuleManager)
@@ -22,7 +22,7 @@ pod 'CSModuleManager'
 
 ## Author
 
-litianxing, litianxing@nowcoder.com
+CoderStar, 1340529758@qq.com
 
 ## License
 

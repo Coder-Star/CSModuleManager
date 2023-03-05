@@ -1,0 +1,16 @@
+PODS:
+  - CSModuleManager (0.0.1)
+
+DEPENDENCIES:
+  - CSModuleManager (from `../`)
+
+EXTERNAL SOURCES:
+  CSModuleManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CSModuleManager: f0b6541f518da1e3c24a5710560eac4ed9e1538c
+
+PODFILE CHECKSUM: 84ce2014e6ed92fbbafde2c6ca3f2cdc2ef49452
+
+COCOAPODS: 1.11.3
