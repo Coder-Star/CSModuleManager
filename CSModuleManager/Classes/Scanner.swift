@@ -22,9 +22,10 @@ public class Scanner {
     /// 扫描
     /// - Parameter strategies: 扫描策略
     public static func scan(strategies: [ClassScannableStrategy]) {
-        if canEnumerateClassesInImage() {
+        if canEnumerateClasses() {
             /// 快速查找
-            enumerateClassesInMainBundle { type in
+            enumerateClasses(false) { type in
+                print(type)
                 for strategy in strategies {
                     if strategy.isMatched(anyClass: type) {
                         strategy.handle(anyClass: type)
