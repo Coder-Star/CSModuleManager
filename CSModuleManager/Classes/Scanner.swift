@@ -25,7 +25,6 @@ public class Scanner {
         if canEnumerateClasses() {
             /// 快速查找
             enumerateClasses(false) { type in
-                print(type)
                 for strategy in strategies {
                     if strategy.isMatched(anyClass: type) {
                         strategy.handle(anyClass: type)
